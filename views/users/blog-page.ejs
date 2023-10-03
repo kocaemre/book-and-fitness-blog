@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/libs/bootstrap/dist/css/bootstrap.min.css"> 
+    <style>
+        body {
+            background: #E0EAFC;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+        }
+    </style>
+    <title>Blog page</title>
+</head>
+<body>
+        <!-- Navbar -->
+         <%- include('../partials/nav') %>
+
+        <% data.forEach(element => { %>
+            <div class="card mx-auto my-5 text-bg-primary " style="max-width: 700px;--bs-bg-opacity: .7;">
+                <div class="card-header">
+                Agatha Christie
+                </div>
+                <div class="card-body">
+                <h5 class="card-title"><%= element.title %></h5>
+                <p class="card-text"><%= element.description %></p>
+                </div>
+    
+    
+            </div>
+    
+        <% }) %>
+
+        
+        
+    
+
+
+
+    <!-- footer -->
+    <%- include('../partials/footer') %>
+</body>
+</html>

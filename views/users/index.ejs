@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/libs/bootstrap/dist/css/bootstrap.min.css"> 
+    <style>
+        body {
+                /* background */
+            background: #E0EAFC;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+    </style>
+    <title>Home</title>
+</head>
+
+
+
+<body>
+
+    <!-- Navbar -->
+    <%- include('../partials/nav') %>
+
+
+    <div class="text-center container">
+        <div class="my-4 fs-1">
+            Welcome to Book Blog
+        </div>
+        <div class="m-2 fs-4">
+            <p>Are you a bookworm at heart, constantly in search of your next literary adventure? Look no further! Welcome to Book Blog, your ultimate destination for all things books.</p>
+
+            </p>At Book Blog, we're passionate about the written word and the worlds it can transport you to. Whether you're an avid reader, a casual book lover, or just someone looking for a good read, you've come to the right place. Our mission is to guide you through the vast realm of literature, helping you discover new authors, genres, and hidden gems along the way.</p>
+        </div>
+
+    </div>
+
+    <ol class="container list-group list-group-numbered p-2">
+        <% for( let i = 0; i < data.length; i++ ) { %>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold"><%= data[i].title %></div>
+                  <%= data[i].description %>
+                </div>
+              </li>
+        <% } %>
+        
+        
+    </ol>
+
+    <!-- footer -->
+    <%- include('../partials/footer') %>
+    
+</body>
+</html>

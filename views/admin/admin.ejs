@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/libs/bootstrap/dist/css/bootstrap.min.css"> 
+    <style>
+        body {
+            /* for center the page */
+            display: flex;
+            justify-content: center;
+            align-items: center; /* ortalar */
+            height: 100vh;
+            background: #E0EAFC;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div class="container">
+        <h1 class="container text-center">ADMIN PANEL</h1>
+        <div class="row">
+            <div class="text-center container"style="max-width: 400px;">
+                <form>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Username</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <div id="usernameHelp" class="form-text text-danger">This is a restricted area!</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Log-in</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

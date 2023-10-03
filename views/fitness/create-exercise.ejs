@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/libs/bootstrap/dist/css/bootstrap.min.css"> 
+    <style>
+        body {
+                /* background */
+            background: #E0EAFC;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+    </style>
+    <title>Create Exercise</title>
+</head>
+
+
+
+<body>
+
+    <!-- Navbar -->
+    <%- include('../partials/nav') %>
+
+
+    <div class="container p-5">
+    <form method="POST">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label" >Exercise Name</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" name="title" placeholder="Exercise Name">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label mt-1">Enter Description</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" name="description" rows="3" placeholder="Description" ></textarea>
+          </div>
+          <select class="form-select mb-3" name="day" required>
+            <option value="" disabled selected>Select Day</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            
+          </select>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-3">Create Exercise</button>
+            <a class="btn btn-danger mb-3 mx-3" href="/fitness/exercise-tables" role="button">Cancel</a>
+          </div>
+    </form>
+    </div>
+
+
+    <!-- footer -->
+    <%- include('../partials/footer') %>
+    
+</body>
+</html>
